@@ -50,10 +50,6 @@ def clean_stations(near_stations,bikes_only=False, docks_only=False):
 
     # TODO: IF LOOKING FOR JUST BIKES/DOCKS: remove if no bikes/docks
 
-def sort_stations(lat, lng, near_stations_dict):
-    """Given a dict. of stations, returns a list of station IDs sorted according to dist. from given coord's."""
-    pass
-
 def in_manhattan_or_brooklyn(addr_obj):
     for component in addr_obj["address_components"]:
         if "sublocality_level_1" in component["types"] and component["long_name"] in ["Manhattan", "Brooklyn"]:
@@ -83,7 +79,6 @@ def get_a_bike(station_dict):
                 near_stations[station_id]["availableBikes"],
                 near_stations[station_id]["totalDocks"]
             )
-        print "lat", lat, "lng", lng
 
 if __name__ == '__main__':
     station_dict = get_all_docks()
