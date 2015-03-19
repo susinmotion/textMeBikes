@@ -15,3 +15,12 @@ A program for those of us with dumbphones who ride CitiBikes (yes, we exist!) --
     - find nearby stations, clean the results of any not-in-service stations and check if we have enough. If not, repeat the search for nearby stations, widening the search radius.
 - we sort the resultant stations by distance from the given address (currently calculated as-the-crow-flies--more useful implementation is probably to do this via walking distance as calculated by Google Maps).
 - we print out the resultant stations in order of proximity to the given address, along with information of `# bikes / # docks`.
+
+### TO-DO:
+- PHONE CAPABILITY
+- More tests. Like really, any tests.
+- Distance --> gmaps walking distance
+- Just bikes/docks
+- Trim station addresses (e.g. "avenue" --> "ave")
+- Cap number of responses as 160 chars
+    - `more` feature? (presumably, would cache results from that phone number's last request)
